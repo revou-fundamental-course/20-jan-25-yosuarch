@@ -1,16 +1,15 @@
 body {
-    margin: 0;
-    padding: 0;
     background: #f46b45;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #eea849, #f46b45);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #eea849, #f46b45); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     user-select: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;  /* Added this line */
+    justify-content: space-between;  /* Changed this line */
     align-items: center;
     height: 100vh;
-    overflow: hidden;
+    overflow-y: auto;  /* Enable vertical scrolling */
 }
 
 .scroll-container {
@@ -19,21 +18,28 @@ body {
     overflow-y: scroll;
 }
 
-.container-1 {
-    display: flex;
+.container-1, .container-2 {
     width: 600px;
-    height: 80vh;
+    display: flex;
+    flex-grow: 1;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
-    padding: 20px;
-    background-color: rgba(245, 245, 245, 0.123);
-    border-radius: 25px;
+    padding-top: 20px; /* padding-bottom: 20px; */
     transition: ease-in-out 0.5s;
+    height: 100vh;
 }
 
-.container-1 h1 {
+.container-1 {
+    margin-bottom: 20px;
+}
+
+.container-2 {
+    margin-top: 20px;
+    height: 100vh;
+}
+
+.container-1 h1, .container-2 h1 {
     border-bottom: 3px solid whitesmoke;
     margin: 20px;
     text-align: start;
@@ -45,29 +51,40 @@ body {
 p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    color: #eee;
+    color: #000000;
     margin: 20px;
     text-align: justify;
+    border-radius: 5px;
+    outline: 3px solid rgb(255, 255, 255);
+    background-color: rgba(250, 235, 215, 0.25);
+    padding: 20px;
+    transition: ease-out 0.3s;
 }
 
-.cont-next {background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%)}
-.cont-next {
-   margin: 10px;
-   margin-top: 100px;
-   padding: 15px 45px;
-   text-align: center;
-   text-transform: uppercase;
-   transition: 0.5s;
-   background-size: 200% auto;
-   color: white;            
-   box-shadow: 0 0 20px #eee;
-   border-radius: 10px;
-   border: none;
-   display: block;
- }
+p:hover {
+    background-color: rgba(250, 235, 215, 0.65);
+    padding: 20px;
 
- .cont-next:hover {
-   background-position: right center; /* change the direction of the change here */
-   color: #fff;
-   text-decoration: none;
- }
+}
+
+.cont-next {
+    background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD 51%, #4CB8C4 100%);
+    margin: 10px;
+    margin-top: 100px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    border: none;
+    display: block;
+}
+
+.cont-next:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
