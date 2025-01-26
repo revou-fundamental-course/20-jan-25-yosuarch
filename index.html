@@ -3,14 +3,18 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css\index-style.css">
+
+        <!-- this is style css file, costumize file name to prevent duplicate name in the future -->
+        <link rel="stylesheet" href="css\index-style.css"> 
+
         <title>BMI Calculator</title>
     </head>
     <body>
                 <div class="scoll-container">
+                    <!-- first display -->
                     <div class="container-1">
                         <h1>Welcome to Body Mass Index</h1>
-                        <p>
+                        <p class="p-firsdisplay">
                             <strong style="color: black;">Body Mass Index (BMI)</strong> is a numerical value derived from an individual's
                             weight and height, serving as a common measure to classify underweight, normal weight, overweight,
                             and obesity in adults. The formula to calculate BMI is weight in kilograms divided by height in meters squared (kg/m²).
@@ -18,24 +22,55 @@
                             those with high muscle mass. It's important to consider other factors, such as age, gender, and overall health, when interpreting BMI results.
                             Consulting a healthcare professional for a comprehensive health assessment is always recommended.
                         </p>
+                        <br>
+                        <button id="openModalBtn">Proceed</button>
                     </div>
                     
-                    <div class="container-2">
-                        <form class="input-data">
-                                <h1>Input Form</h1>
-                                <label for="Weight">Weight :</label>
-                                <br>
-                                <input class="input-form" type="number" id="Weight" required>
-                                <br>
-                                <label for="Age">Age :</label>
-                                <br>
-                                <input class="input-form" type="number" id="Age" required>
-                                <br>
-                                <label for="Height">Height :</label>
-                                <br>
-                                <input class="input-form" type="number" id="Name" required>
-                            </form>
-                    </div>
 
+                    <!-- input area BMI data -->
+                    <div id="myModal" class="modal-container" style="display: none; justify-content: center; align-items: center;">
+                        <form class="input-data">
+                            <span class="close-modal">&times;</span>
+
+                            <h1>Input Form</h1>
+                            <label for="Weight" style="font-size: 20px;">Weight :</label>
+                            <br>
+                            <input class="input-form" type="number" id="Weight" required>
+                            <br>
+                            <label for="Age" style="font-size: 20px;">Age :</label>
+                            <br>
+                            <input class="input-form" type="number" id="Age" required>
+                            <br>
+                            <label for="Height" style="font-size: 20px;">Height :</label>
+                            <br>
+                            <input class="input-form" type="number" id="Height" required>
+                            
+                            <section class="Sec2">
+
+                                <h2>Feature</h2>
+                                        <ol type="1">
+                                            <li>Calculate the Body Weight</li>
+                                            <li>Determine of "Ideal" or "Not Ideal" the body weight</li>
+                                            <li>Preparing the Exercise for achieving the ideal body weight</li>
+                                        </ol>
+                                <p>
+                                    This Calculator can work Effectivly to Adult (Except Pregnant and Breastfeeding Woman).
+                                    Every calculated result must be consultated with doctor.
+                                </p>
+                                <br>
+                                <p>
+                                    Calculator will give you ratio between body weight and body height.
+                                </p>
+                            </section>
+                            <div class="input-button-container" id="cont-btn">
+                                <button class="calc-button" id="calculate">Calculate</button>
+                                <button class="calc-button" id="reset">Rest</button>
+                            </div>
+                        </form>
+                    </div>                   
                 </div>
+        
+
+        <!-- costumize .js file name to prevent duplicate file name in the future -->
+        <script src="js\index-script.js"></script>
     </body>
