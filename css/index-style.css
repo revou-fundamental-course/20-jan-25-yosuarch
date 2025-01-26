@@ -12,12 +12,6 @@ body {
     height: 95vh;
 }
 
-.scroll-container {
-    display: flex;
-    height: 95vh;
-    width: 100%;
-}
-
 .container-1 {
     width: 600px;
     display: flex;
@@ -31,7 +25,7 @@ body {
 .container-1 h1 {
     border-bottom: 3px solid whitesmoke;
     margin: 20px;
-    text-align: start;
+    text-align: center;
     font-size: 30px;
     color: whitesmoke;
     padding-bottom: 10px;
@@ -86,25 +80,29 @@ body {
     position: fixed;
     z-index: 5;
     left: 0;
-    top: 5%;
+    top: 0;
     width: 100%;
-    height: 100%;
+    height: 120%;
     overflow: auto;
 }
 
 .input-data {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 600px;
-    border-radius: 25px;
     border: 5px solid whitesmoke;
-    padding: 15px;
+    border-top: none;
+    border-bottom: none;
     margin: auto;
+    padding-top: 0px;
+    margin-top: 0px;
+    gap: 5px;
     padding: 20px;
     width: 80%;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    height: 85vh;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    height: 120%;
 }
 
 #cont-btn {
@@ -135,20 +133,18 @@ body {
    cursor: pointer;
  }
 
-
-
 /* input section */
 .input-form {
     font-size: 20px;
     border-radius: 5px;
     border: none;
-    height: 45px;
-    background-color: lightcyan;
+    height: 30px;
+    background-color: rgb(209, 209, 209);
     transition: ease-in .5s;
 }
 
 .input-form:hover{
-    background-color: lightgrey;
+    background-color: rgb(226, 240, 255);
 }
 
 /* input information */
@@ -162,7 +158,7 @@ body {
 
 /* close button inside modal */
 .close-modal {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     color: #000000;
@@ -178,4 +174,19 @@ body {
     color: rgb(102, 102, 102);
     text-decoration: none;
     cursor: pointer;
+}
+
+/* external link */
+.link-1 {
+    font-size: 15px;
+    color: whitesmoke;
+    text-align: center;
+    padding: 10px;
+    transition: ease-out 0.3s;
+}
+
+.link-1:hover{
+    color: blue;
+    border-radius: 10px;
+    background-color: #a1a1a188;
 }
