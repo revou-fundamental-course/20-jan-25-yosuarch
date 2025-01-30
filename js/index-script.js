@@ -25,7 +25,7 @@ function calculateBMI() {
     var height = document.getElementById("Height").value;
     var age = document.getElementById("Age").value;
 
-    // Check if gender, weight, or height is not filled
+    // Check if gender, weight, or height is blank
     if (!genderElement || !weight || !height) {
         showNotificationModal("Gender, Weight, and Height are mandatory to be filled.");
         return;
